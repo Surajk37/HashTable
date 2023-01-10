@@ -82,7 +82,7 @@ namespace HashTable
         }
 
 
-        public void Remove(K key)       //Creating remove method
+        public void Remove(K key)       //Created remove method
         {
             var linkedList = GetArrayPositionAndLinkedList(key);
             bool itemFound = false;
@@ -93,19 +93,17 @@ namespace HashTable
                 {
                     itemFound = true;
                     foundItem = item;
-                    //linkedList.Remove(item);
                 }
             }
             if (itemFound)
             {
                 linkedList.Remove(foundItem);
-                //Console.WriteLine("Removed successfully with key " + foundItem.Key);
             }
         }
 
         protected LinkedList<KeyValue<K, V>> GetLinkedList(int position)
         {
-            LinkedList<KeyValue<K, V>> linkedList = items[position]; //0
+            LinkedList<KeyValue<K, V>> linkedList = items[position];
             if (linkedList == null)
             {
                 linkedList = new LinkedList<KeyValue<K, V>>();
@@ -114,7 +112,7 @@ namespace HashTable
             return linkedList;
         }
 
-        public void Display()           //Creating Display method
+        public void Display()           //Created Display method
         {
             foreach (var linkedList in items)
             {
